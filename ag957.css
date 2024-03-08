@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    color: palevioletred;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#gameSetup,
+#game {
+    border: 2px solid pink;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#game {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#game-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+#guess-table-container {
+    flex: 1;
+}
+
+input[type="number"],
+button {
+    border: 1px solid pink;
+    background-color: white;
+    color: pink;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: pink;
+    color: white;
+}
+
+input[type="radio"]:checked+label {
+    font-weight: bold;
+    color: pink;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+}
+
+#guess-table {
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+#guess-table th,
+#guess-table td {
+    padding: 8px;
+    border: 1px solid pink;
+}
+
+#guess-table th {
+    background-color: pink;
+    color: white;
+}
