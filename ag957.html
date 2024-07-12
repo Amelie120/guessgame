@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the number game</title> 
+  <!--linking to my CSS file-->
+  <link rel="stylesheet" href="ag957.css">
+</head> 
+<body> 
+  <h1>Guess the number game</h1>
+  <div id="gameSetup">
+    <p>Select a range of numbers</p>
+    <!--adding radio buttons to select the number range-->
+    <input type="radio" id="range1" name="range" value="1-10"><label for="range1">10</label>
+    <input type="radio" id="range2" name="range" value="10-100"><label for="range2">100</label>
+    <input type="radio" id="range3" name="range" value="100-1000"><label for="range3">1000</label>
+    <!--disabling the start button at the start-->
+    <button id="startbutton" disabled>Start</button>
+  </div>
+  <!--Writing the game-->
+  <div id="game" style="display: none;">
+    <div id="game-content">
+      <p id="instructions"></p>
+      <!--adding an input for the users guess-->
+      <input type="number" id="guessthenumber" placeholder="Your guess is ...">
+      <!--adding a button to check-->
+      <button id="checkbutton">Check</button>
+      <!--the feedback from the player -->
+      <p id="feedback"></p>
+      <p>Guesses Left:</p>
+      <!--adding a list to add all the number of guesses-->
+      <ul id="guesslist"></ul>
+    </div>
+    <div id="guess-table-container">
+      <!--adding a table to display all the guesses with their values-->
+      <table id="guess-table">
+        <thead>
+          <tr>
+            <th>Guess</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <!--new rows will be added in the body-->
+        <tbody id="guess-table-body"></tbody>
+      </table>
+    </div>
+  </div>
+  <!--adding a modal for the end of the game messages-->
+  <div id="modal" style="display: none;">
+    <div id="modal-content">
+      <!--displaying the end message here-->
+      <p id="modal-message"></p>
+      <!--adding a button to restart the game-->
+      <button id="play-again-button">Play again</button>
+    </div>
+  </div>
+  <!--linking to my javascript file-->
+  <script src="ag957.js"></script>
+</body>
+</html>
