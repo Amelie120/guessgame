@@ -1,2 +1,2 @@
 # guessgame
-This is a guessingame I coded myself. Enjoy :)
+This is a guessing game I coded myself. Enjoy :)
